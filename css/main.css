@@ -58,6 +58,20 @@ main {
       -webkit-animation: flicker-in-2 2s both;
       animation: flicker-in-2 2s both; }
 
+.cover {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  z-index: 10;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  background-color: #070707;
+  transition: all 10s;
+  transform: scale(0); }
+
 .squareholder {
   position: fixed;
   left: 50%;
@@ -82,6 +96,83 @@ main {
   height: 300px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   padding: 10px; }
+
+.progressBar {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -40vw;
+  margin-top: 40vh;
+  z-index: -1;
+  width: 80vw;
+  height: 2px;
+  padding: 0px;
+  background-color: #fff;
+  width: 0%;
+  -webkit-transition: .75s;
+  -moz-transition: .75s;
+  -o-transition: .75s;
+  transition: .75s; }
+
+.progress-running {
+  width: 80%; }
+
+@keyframes progressBar {
+  0% {
+    width: 0%; }
+  100% {
+    width: 80%; } }
+
+.squareOutline {
+  --direction: normal;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -125px;
+  margin-top: -125px;
+  z-index: 10;
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, #C9C9C9 100%, #C9C9C9 100%), linear-gradient(to bottom, #C9C9C9 100%, #C9C9C9 100%), linear-gradient(to right, #C9C9C9 100%, #C9C9C9 100%), linear-gradient(to bottom, #C9C9C9 100%, #C9C9C9 100%);
+  background-size: 0% 5px, 5px 0%, 0% 5px, 5px 0%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  animation-play-state: running; }
+
+.outline-animate {
+  animation-direction: normal;
+  animation: bg 2s cubic-bezier(0.19, 1, 0.22, 1) 1;
+  background-size: 100% 5px, 5px 100%, 100% 5px, 5px 100%; }
+
+.outline-animate-reverse {
+  animation-direction: reverse;
+  animation: bg 2s cubic-bezier(0.19, 1, 0.22, 1) 1;
+  background-size: 0% 5px, 5px 0%, 0% 5px, 5px 0%; }
+
+@keyframes bg {
+  0% {
+    background-size: 0 5px, 5px 0, 0 5px, 5px 0; }
+  25% {
+    background-size: 100% 5px, 5px 0, 0 5px, 5px 0; }
+  50% {
+    background-size: 100% 5px, 5px 100%, 0 5px, 5px 0; }
+  75% {
+    background-size: 100% 5px, 5px 100%, 100% 5px, 5px 0; }
+  100% {
+    background-size: 100% 5px, 5px 100%, 100% 5px, 5px 100%; } }
+
+@keyframes bg2 {
+  0% {
+    background-size: 0 5px, 5px 0, 0 5px, 5px 0; }
+  25% {
+    background-size: 100% 5px, 5px 0, 0 5px, 5px 0; }
+  50% {
+    background-size: 100% 5px, 5px 100%, 0 5px, 5px 0; }
+  75% {
+    background-size: 100% 5px, 5px 100%, 100% 5px, 5px 0; }
+  100% {
+    background-size: 100% 5px, 5px 100%, 100% 5px, 5px 100%; } }
 
 .square2 {
   -webkit-animation: rotate-center 4s linear 0.25s infinite alternate both;
@@ -140,6 +231,7 @@ main {
   padding: 10px; }
 
 .cross {
+  transition: all .5s;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -283,6 +375,83 @@ main {
   border: 3px solid rgba(255, 255, 255, 0.1);
   padding: 10px;
   transform: rotate(45deg); }
+
+.biggerHolder {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  z-index: -1;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  filter: blur(15px); }
+
+.squareBigger {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -1000px;
+  margin-top: -1000px;
+  z-index: -1;
+  width: 2000px;
+  height: 2000px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  transform: rotate(20deg); }
+
+.squareBigger2 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -1000px;
+  margin-top: -1000px;
+  z-index: -1;
+  width: 2000px;
+  height: 2000px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  transform: rotate(40deg); }
+
+.squareBigger3 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -1000px;
+  margin-top: -1000px;
+  z-index: -1;
+  width: 2000px;
+  height: 2000px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  transform: rotate(60deg); }
+
+.squareBigger4 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -1000px;
+  margin-top: -1000px;
+  z-index: -1;
+  width: 2000px;
+  height: 2000px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  transform: rotate(80deg); }
+
+.squareBigger5 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -1000px;
+  margin-top: -1000px;
+  z-index: -1;
+  width: 2000px;
+  height: 2000px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  transform: rotate(80deg); }
 
 .squareLeft {
   position: fixed;
