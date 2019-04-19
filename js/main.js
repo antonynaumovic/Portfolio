@@ -43,7 +43,7 @@ $("body")
 
 function redirect() {
 	timeout2 = setTimeout(function() {
-		window.location.href = "/work.html";
+		window.location.href = "work.html";
 	}, 2000);
 }
 
