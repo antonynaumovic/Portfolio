@@ -81,3 +81,12 @@ body {
   top: 50%;
   margin-left: -40vw;
   margin-top: -16vw; }
+
+.layer8 {
+  position: fixed;
+  z-index: -9;
+  width: 107vw;
+  left: 50%;
+  top: 50%;
+  margin-left: -40.5vw;
+  margin-top: -15vw; }

@@ -9,8 +9,10 @@ function moveBackground() {
 	y += (lFollowY - y) * friction;
 
 	translate = "translate(" + x * 2 + "px, " + y * 2 + "px) scale(" + 1 + ")";
-
-	translate2 = "translate(" + x * 3 + "px, " + y * 3 + "px) scale(" + 1 + ")";
+	translate2 = "translate(" + x * 5 + "px, " + y * 5 + "px) scale(" + 1 + ")";
+	translate3 = "translate(" + x * 3 + "px, " + y * 3 + "px) scale(" + 1 + ")";
+	translate4 = "translate(" + x * 7 + "px, " + y * 7 + "px) scale(" + 1 + ")";
+	translate5 = "translate(" + x * 9 + "px, " + y * 9 + "px) scale(" + 1 + ")";
 
 	$(".layer1").css({
 		"-webit-transform": translate,
@@ -25,15 +27,15 @@ function moveBackground() {
 	});
 
 	$(".layer3").css({
-		"-webit-transform": translate2,
-		"-moz-transform": translate2,
-		transform: translate2
+		"-webit-transform": translate3,
+		"-moz-transform": translate3,
+		transform: translate3
 	});
 
 	$(".layer4").css({
-		"-webit-transform": translate2,
-		"-moz-transform": translate2,
-		transform: translate2
+		"-webit-transform": translate4,
+		"-moz-transform": translate4,
+		transform: translate4
 	});
 
 	$(".layer5").css({
@@ -49,9 +51,15 @@ function moveBackground() {
 	});
 
 	$(".layer7").css({
-		"-webit-transform": translate2,
-		"-moz-transform": translate2,
-		transform: translate2
+		"-webit-transform": translate4,
+		"-moz-transform": translate4,
+		transform: translate4
+	});
+
+	$(".layer8").css({
+		"-webit-transform": translate5,
+		"-moz-transform": translate5,
+		transform: translate5
 	});
 
 	//.layer5
