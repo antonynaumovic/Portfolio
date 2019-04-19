@@ -7,15 +7,21 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   line-height: 1.5; }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   font-weight: 400; }
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
     font-size: 6rem; }
-  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(12, 12, 12, 0.5); }
@@ -30,7 +36,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  font-family: 'Oswald', sans-serif; }
+  font-family: "Oswald", sans-serif; }
 
 :root {
   --type-value: 4s; }
@@ -109,10 +115,10 @@ main {
   padding: 0px;
   background-color: #fff;
   width: 0%;
-  -webkit-transition: .75s;
-  -moz-transition: .75s;
-  -o-transition: .75s;
-  transition: .75s; }
+  -webkit-transition: 0.75s;
+  -moz-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s; }
 
 .progress-running {
   width: 80%; }
@@ -135,44 +141,44 @@ main {
   height: 250px;
   padding: 10px;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to right, #C9C9C9 100%, #C9C9C9 100%), linear-gradient(to bottom, #C9C9C9 100%, #C9C9C9 100%), linear-gradient(to right, #C9C9C9 100%, #C9C9C9 100%), linear-gradient(to bottom, #C9C9C9 100%, #C9C9C9 100%);
-  background-size: 0% 5px, 5px 0%, 0% 5px, 5px 0%;
-  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(to right, #c9c9c9 100%, #c9c9c9 100%), linear-gradient(to bottom, #c9c9c9 100%, #c9c9c9 100%), linear-gradient(to right, #c9c9c9 100%, #c9c9c9 100%), linear-gradient(to bottom, #c9c9c9 100%, #c9c9c9 100%);
+  background-size: 0% 5px, 5px 0%, 0% 5px, 5px 0%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
   animation-play-state: running; }
 
 .outline-animate {
   animation-direction: normal;
   animation: bg 2s cubic-bezier(0.19, 1, 0.22, 1) 1;
-  background-size: 100% 5px, 5px 100%, 100% 5px, 5px 100%; }
+  background-size: 100% 5px, 5px 100%, 100% 5px, 5px 100%; }
 
 .outline-animate-reverse {
   animation-direction: reverse;
   animation: bg 2s cubic-bezier(0.19, 1, 0.22, 1) 1;
-  background-size: 0% 5px, 5px 0%, 0% 5px, 5px 0%; }
+  background-size: 0% 5px, 5px 0%, 0% 5px, 5px 0%; }
 
 @keyframes bg {
   0% {
-    background-size: 0 5px, 5px 0, 0 5px, 5px 0; }
+    background-size: 0 5px, 5px 0, 0 5px, 5px 0; }
   25% {
-    background-size: 100% 5px, 5px 0, 0 5px, 5px 0; }
+    background-size: 100% 5px, 5px 0, 0 5px, 5px 0; }
   50% {
-    background-size: 100% 5px, 5px 100%, 0 5px, 5px 0; }
+    background-size: 100% 5px, 5px 100%, 0 5px, 5px 0; }
   75% {
-    background-size: 100% 5px, 5px 100%, 100% 5px, 5px 0; }
+    background-size: 100% 5px, 5px 100%, 100% 5px, 5px 0; }
   100% {
-    background-size: 100% 5px, 5px 100%, 100% 5px, 5px 100%; } }
+    background-size: 100% 5px, 5px 100%, 100% 5px, 5px 100%; } }
 
 @keyframes bg2 {
   0% {
-    background-size: 0 5px, 5px 0, 0 5px, 5px 0; }
+    background-size: 0 5px, 5px 0, 0 5px, 5px 0; }
   25% {
-    background-size: 100% 5px, 5px 0, 0 5px, 5px 0; }
+    background-size: 100% 5px, 5px 0, 0 5px, 5px 0; }
   50% {
-    background-size: 100% 5px, 5px 100%, 0 5px, 5px 0; }
+    background-size: 100% 5px, 5px 100%, 0 5px, 5px 0; }
   75% {
-    background-size: 100% 5px, 5px 100%, 100% 5px, 5px 0; }
+    background-size: 100% 5px, 5px 100%, 100% 5px, 5px 0; }
   100% {
-    background-size: 100% 5px, 5px 100%, 100% 5px, 5px 100%; } }
+    background-size: 100% 5px, 5px 100%, 100% 5px, 5px 100%; } }
 
 .square2 {
   -webkit-animation: rotate-center 4s linear 0.25s infinite alternate both;
@@ -204,7 +210,7 @@ main {
 
 .square4 {
   -webkit-animation: rotate-center 4s linear 0.75s infinite alternate both;
-  animation: rotate-center 4s linear  0.75s infinite alternate both;
+  animation: rotate-center 4s linear 0.75s infinite alternate both;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -231,7 +237,7 @@ main {
   padding: 10px; }
 
 .cross {
-  transition: all .5s;
+  transition: all 0.5s;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -297,9 +303,7 @@ main {
   z-index: -1;
   width: 600px;
   height: 600px;
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
-  -webkit-filter: blur(1px);
-  filter: blur(1px); }
+  border: 1.5px solid rgba(255, 255, 255, 0.4); }
 
 .circle3 {
   -webkit-border-radius: 310px;
@@ -389,6 +393,8 @@ main {
   filter: blur(15px); }
 
 .squareBigger {
+  -webkit-animation: rotate-center 4s linear infinite normal both;
+  animation: rotate-center 4s linear infinite normal both;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -402,6 +408,8 @@ main {
   transform: rotate(20deg); }
 
 .squareBigger2 {
+  -webkit-animation: rotate-center 4s linear infinite reverse both;
+  animation: rotate-center 4s linear infinite reverse both;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -415,6 +423,8 @@ main {
   transform: rotate(40deg); }
 
 .squareBigger3 {
+  -webkit-animation: rotate-center 4s linear 0.5s infinite both;
+  animation: rotate-center 4s linear 0.5s infinite both;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -428,19 +438,8 @@ main {
   transform: rotate(60deg); }
 
 .squareBigger4 {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  margin-left: -1000px;
-  margin-top: -1000px;
-  z-index: -1;
-  width: 2000px;
-  height: 2000px;
-  border: 3px solid rgba(255, 255, 255, 0.2);
-  padding: 10px;
-  transform: rotate(80deg); }
-
-.squareBigger5 {
+  -webkit-animation: rotate-center 4s linear 0.5s infinite reverse both;
+  animation: rotate-center 4s linear 0.5s infinite reverse both;
   position: fixed;
   left: 50%;
   top: 50%;
