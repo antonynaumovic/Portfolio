@@ -55,6 +55,7 @@ main {
   main#home {
     overflow: hidden; }
     main#home h1 {
+      z-index: 100;
       display: table;
       text-transform: uppercase;
       letter-spacing: 0.5rem;
@@ -62,7 +63,9 @@ main {
       font-size: 2rem;
       margin-top: 40vh;
       -webkit-animation: flicker-in-2 2s both;
-      animation: flicker-in-2 2s both; }
+      animation: flicker-in-2 2s both;
+      -webkit-animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+      animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
 
 .cover {
   position: fixed;
@@ -77,6 +80,32 @@ main {
   background-color: #070707;
   transition: all 10s;
   transform: scale(0); }
+
+.initialCover {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  z-index: 10;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  background-color: #070707;
+  transition: all 5s;
+  transform: scale(0);
+  -webkit-animation: scaleBig 1s both;
+  animation: scaleBig 1s both; }
+
+@keyframes scaleBig {
+  0% {
+    moz-transform: scale(100);
+    webit-transform: scale(100);
+    transform: scale(100); }
+  100% {
+    moz-transform: scale(0);
+    webit-transform: scale(0);
+    transform: scale(0); } }
 
 .squareholder {
   position: fixed;
@@ -122,6 +151,24 @@ main {
 
 .progress-running {
   width: 80%; }
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0; }
+  40% {
+    opacity: 0.6; }
+  100% {
+    opacity: 1; } }
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0; }
+  40% {
+    opacity: 0.6; }
+  100% {
+    opacity: 1; } }
 
 @keyframes progressBar {
   0% {

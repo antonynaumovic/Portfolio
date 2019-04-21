@@ -4,6 +4,64 @@ var lFollowX = 0,
 	y = 0,
 	friction = 1 / 80;
 
+var item = document.querySelector(":root");
+var cover = $(".cover");
+var progressBar = $(".progressBar");
+var clicked = false;
+var widthBar = 0;
+
+var down = false;
+progressBar.addClass("progress-pause");
+
+$("body")
+	.mousedown(function() {
+		console.log("yeet");
+		down = true;
+
+		console.log(down);
+
+		if (down) {
+			progressBar.removeClass("progress-pause");
+			progressBar.addClass("progress-running");
+		} else {
+			progressBar.removeClass("progress-running");
+			progressBar.addClass("progress-pause");
+		}
+	})
+	.mouseup(function() {
+		down = false;
+		console.log(down);
+		if (down) {
+			progressBar.removeClass("progress-pause");
+			progressBar.addClass("progress-running");
+		} else {
+			progressBar.removeClass("progress-running");
+			progressBar.addClass("progress-pause");
+		}
+	});
+
+function redirect() {
+	timeout2 = setTimeout(function() {
+		window.location.href = "index.html";
+	}, 2000);
+}
+
+function scaleCover() {
+	cover.css({
+		"-webit-transform": "scale(0)",
+		"-moz-transform": "scale(0)",
+		transform: "scale(0)"
+	});
+}
+
+function scaleCoverBig() {
+	cover.css({
+		"-webit-transform": "scale(100)",
+		"-moz-transform": "scale(100)",
+		transform: "scale(100)"
+	});
+}
+
 function moveBackground() {
 	x += (lFollowX - x) * friction;
 	y += (lFollowY - y) * friction;
@@ -69,6 +127,14 @@ function moveBackground() {
 	//.layer2
 	//.layer6
 	//.layer7
+
+	widthBar = progressBar.width();
+	widthBar = (widthBar / progressBar.parent().width()) * 100;
+	console.log(widthBar);
+	if (widthBar >= 80) {
+		scaleCoverBig();
+		redirect();
+	}
 
 	window.requestAnimationFrame(moveBackground);
 }
