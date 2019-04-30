@@ -14,7 +14,7 @@ var down = false;
 progressBar.addClass("progress-pause");
 
 $("body")
-	.mousedown(function() {
+	.mousedown(function () {
 		console.log("yeet");
 		down = true;
 
@@ -28,7 +28,7 @@ $("body")
 			progressBar.addClass("progress-pause");
 		}
 	})
-	.mouseup(function() {
+	.mouseup(function () {
 		down = false;
 		console.log(down);
 		if (down) {
@@ -41,8 +41,8 @@ $("body")
 	});
 
 function redirect() {
-	timeout2 = setTimeout(function() {
-		window.location.href = "index.html";
+	timeout2 = setTimeout(function () {
+		window.location.href = "work2.html";
 	}, 2000);
 }
 
@@ -139,7 +139,7 @@ function moveBackground() {
 	window.requestAnimationFrame(moveBackground);
 }
 
-$(window).on("mousemove click", function(e) {
+$(window).on("mousemove click", function (e) {
 	var lMouseX = Math.max(
 		-100,
 		Math.min(100, $(window).width() / 2 - e.clientX)
