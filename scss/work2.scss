@@ -1,0 +1,191 @@
+$primary-color: rgb(7, 7, 7);
+$secondary-color: rgb(255, 102, 0);
+
+@import url("https://fonts.googleapis.com/css?family=Lato|Oswald:600");
+
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    &#home {
+        overflow: hidden;
+
+        h1 {
+            position: relative;
+            z-index: 10;
+            display: table;
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            text-align: left;
+            font-size: 2rem;
+            margin-top: 40vh;
+            -webkit-animation: flicker-in-2 2s both;
+            animation: flicker-in-2 2s both;
+        }
+    }
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    background: $primary-color;
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    line-height: 1.5;
+}
+
+.progressBar {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -40vw;
+    margin-top: 40vh;
+    z-index: -1;
+    width: 80vw;
+    height: 2px;
+    padding: 0px;
+    background-color: #fff;
+    width: 0%;
+    -webkit-transition: 0.75s;
+    -moz-transition: 0.75s;
+    -o-transition: 0.75s;
+    transition: 0.75s;
+    //animation: progressBar 1s linear normal both;
+}
+
+.cover {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    z-index: 10;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    background-color: $primary-color;
+    transition: all 10s;
+    transform: scale(0);
+}
+
+.progress-running {
+    // animation-play-state: running;
+    // animation: progressBar 1s linear normal both;
+    width: 80%;
+}
+
+.progress-pause {
+    //animation: progressBar 1s linear reverse both;
+    //animation-play-state: paused;
+}
+
+.ShipHolder {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transition: all 10s;
+    height: 100%;
+    width: 100%;
+}
+
+.layer1 {
+    position: fixed;
+    z-index: -5;
+    width: 80vw;
+    left: 50%;
+    top: 50%;
+    margin-left: -40vw;
+    margin-top: -16vw;
+}
+
+.layer2 {
+    position: fixed;
+    z-index: -3;
+    width: 80vw;
+    left: 50%;
+    top: 50%;
+    margin-left: -40vw;
+    margin-top: -16vw;
+}
+
+.layer3 {
+    position: fixed;
+    z-index: -4;
+    width: 80vw;
+    left: 50%;
+    top: 50%;
+    margin-left: -40vw;
+    margin-top: -16vw;
+}
+
+.layer4 {
+    position: fixed;
+    z-index: -3;
+    width: 80vw;
+    left: 50%;
+    top: 50%;
+    margin-left: -40vw;
+    margin-top: -16vw;
+}
+
+.layer5 {
+    position: fixed;
+    z-index: -9;
+    width: 80vw;
+    left: 50%;
+    top: 50%;
+    margin-left: -40vw;
+    margin-top: -16vw;
+}
+
+.layer6 {
+    position: fixed;
+    z-index: -1;
+    width: 80vw;
+    left: 50%;
+    top: 50%;
+    margin-left: -40vw;
+    margin-top: -16vw;
+}
+
+.layer7 {
+    position: fixed;
+    z-index: -3;
+    width: 80vw;
+    left: 50%;
+    top: 50%;
+    margin-left: -40vw;
+    margin-top: -16vw;
+}
+
+.layer8 {
+    position: fixed;
+    z-index: -9;
+    width: 107vw;
+    left: 50%;
+    top: 50%;
+    margin-left: -40vw;
+    margin-top: -15vw;
+}
+
+//.layer5
+//.layer1
+//.layer3
+//.layer4
+//.layer2
+//.layer6
+//.layer7

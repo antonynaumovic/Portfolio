@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Oswald:600");
+body {
+  font-family: "Oswald", sans-serif; }
+
+h1 {
+  text-align: center;
+  color: #070707;
+  margin: 30px; }
+
+.gallery {
+  margin: 0.1rem 1rem; }
+  .gallery img {
+    width: 18vw;
+    padding: 5px;
+    filter: grayscale(100%);
+    transition: all 1s ease-out; }
+  .gallery img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05); }
+
+@media only screen and (max-width: 800px) {
+  /* For mobile phones: */
+  .gallery img {
+    width: 40vw; } }

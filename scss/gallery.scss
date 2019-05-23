@@ -1,0 +1,39 @@
+$primary-color: rgb(7, 7, 7);
+$secondary-color: rgb(255, 102, 0);
+
+@import url("https://fonts.googleapis.com/css?family=Lato|Oswald:600");
+
+@mixin easeOut {
+	transition: all 0.5s ease-out;
+}
+
+body{
+    font-family: "Oswald", sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: $primary-color;
+    margin: 30px;
+}
+
+.gallery{
+    margin: 0.1rem 1rem;
+    img{
+        width: 18vw;
+        padding: 5px;
+        filter: grayscale(100%);
+        transition: all 1s ease-out;
+    }
+    img:hover{
+        filter: grayscale(0%);
+        transform: scale(1.05);
+    }
+}
+
+@media only screen and (max-width:800px) {
+    /* For mobile phones: */
+    .gallery img{
+        width: 40vw;
+    }
+    }

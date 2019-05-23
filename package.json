@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": " node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Antony Naumovic",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.4.0",
+    "lerp": "^1.0.3",
+    "node-sass": "^4.11.0",
+    "tar": "^4.4.8",
+    "gh-pages": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/antonynaumovic/Portfolio"
+  }
+}
