@@ -57,6 +57,7 @@ header {
 }
 
 main {
+
 	padding: 4rem;
 	height: 100%;
 	.icons {
@@ -391,8 +392,6 @@ main {
 	width: 750px;
 	height: 750px;
 	border: 2px solid rgba(255, 255, 255, 0.2);
-	-webkit-filter: blur(2px);
-	filter: blur(2px);
 }
 .circle1 {
 	-webkit-border-radius: 200px;
@@ -449,8 +448,6 @@ main {
 	width: 1200px;
 	height: 1200px;
 	border: 1.5px solid rgba(255, 255, 255, 0.4);
-	-webkit-filter: blur(3px);
-	filter: blur(3px);
 }
 .circle6 {
 	-webkit-border-radius: 675px;
@@ -465,8 +462,6 @@ main {
 	width: 1350px;
 	height: 1350px;
 	border: 1.5px solid rgba(255, 255, 255, 0.4);
-	-webkit-filter: blur(5px);
-	filter: blur(5px);
 }
 .circle5 {
 	-webkit-border-radius: 850px;
@@ -481,8 +476,7 @@ main {
 	width: 1700px;
 	height: 1700px;
 	border: 1.5px solid rgba(255, 255, 255, 0.4);
-	-webkit-filter: blur(8px);
-	filter: blur(8px);
+
 }
 .squareBig {
 	position: fixed;
@@ -507,7 +501,6 @@ main {
 	width: 300px;
 	height: 300px;
 	padding: 10px;
-	filter: blur(15px);
 }
 
 .squareBigger {
@@ -968,5 +961,91 @@ main {
 		-webkit-filter: blur(0px);
 		filter: blur(0px);
 		opacity: 1;
+	}
+}
+
+
+@media only screen and (max-width:500px){
+    /* For mobile phones: */
+    .gallery img{
+        width: 95vw;
+    }
+}
+
+@media only screen and (max-width:800px) and (min-width:500px) and (orientation: portrait){
+    /* For mobile phones: */
+
+}
+
+@media only screen and (max-width:800px) and (orientation: landscape){
+    /* For mobile phones Landscapes: */
+
+}
+
+@media only screen and (max-width:1600px) and (min-width:800px) and (orientation: landscape){
+    /* For Desktops: */
+
+}
+
+@media only screen and (min-width:1600px){
+    /* For Large Desktops: */
+	.circle {
+		-webkit-filter: blur(2px);
+		filter: blur(2px);
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
+		-webkit-transform: translate3d(0,0,0);
+		-webkit-transform: translateZ(0);
+		backface-visibility: hidden;
+		perspective: 1000;
+		transform: translate3d(0,0,0);
+		transform: translateZ(0);
+	}
+	.circle4 {
+		-webkit-filter: blur(3px);
+		filter: blur(3px);
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
+		-webkit-transform: translate3d(0,0,0);
+		-webkit-transform: translateZ(0);
+		backface-visibility: hidden;
+		perspective: 1000;
+		transform: translate3d(0,0,0);
+		transform: translateZ(0);
+	}
+	.circle6 {
+		-webkit-filter: blur(5px);
+		filter: blur(5px);
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
+		-webkit-transform: translate3d(0,0,0);
+		-webkit-transform: translateZ(0);
+		backface-visibility: hidden;
+		perspective: 1000;
+		transform: translate3d(0,0,0);
+		transform: translateZ(0);
+	}
+	.circle5 {
+		-webkit-filter: blur(8px);
+		filter: blur(8px);
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
+		-webkit-transform: translate3d(0,0,0);
+		-webkit-transform: translateZ(0);
+		backface-visibility: hidden;
+		perspective: 1000;
+		transform: translate3d(0,0,0);
+		transform: translateZ(0);
+	}
+	.biggerHolder {
+		filter: blur(15px);
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
+		-webkit-transform: translate3d(0,0,0);
+		-webkit-transform: translateZ(0);
+		backface-visibility: hidden;
+		perspective: 1000;
+		transform: translate3d(0,0,0);
+		transform: translateZ(0);
 	}
 }

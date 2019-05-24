@@ -17,9 +17,6 @@ progressBar.addClass("progress-pause");
 $("body")
 	.mousedown(function() {
 		down = true;
-
-		console.log(down);
-
 		if (down) {
 			progressBar.removeClass("progress-pause");
 			progressBar.addClass("progress-running");
@@ -30,7 +27,6 @@ $("body")
 	})
 	.mouseup(function() {
 		down = false;
-		console.log(down);
 		if (down) {
 			progressBar.removeClass("progress-pause");
 			progressBar.addClass("progress-running");
@@ -40,9 +36,35 @@ $("body")
 		}
 	});
 
+	$('body').on("touchstart",p_touch_start);
+	$('body').on("touchmove",p_touch_move);
+	$('body').on("touchend",p_touch_end);
+
+	function p_touch_start(){
+		p_touch_move.cancel_click = false;
+		progressBar.removeClass("progress-pause");
+		progressBar.addClass("progress-running");
+	}
+	function p_touch_end(){
+		if(p_touch_move.cancel_click) return;
+		p_touch_move.cancel_click = true;//avoid somehow repeat call
+		//trigger onclick()
+	
+	}
+	function p_touch_move(){
+		//user is drag page, not click
+		p_touch_move.cancel_click = true;
+	}
+
+	if (p_touch_move.cancel_click == true){
+		progressBar.removeClass("progress-running");
+		progressBar.addClass("progress-pause");
+	}
+
+
 function redirect() {
 	timeout2 = setTimeout(function() {
-		window.location.href = "work.html";
+		window.location.href = "gallery.html";
 	}, 2000);
 }
 
@@ -128,7 +150,6 @@ function moveBackground() {
 
 	widthBar = progressBar.width();
 	widthBar = (widthBar / progressBar.parent().width()) * 100;
-	console.log(widthBar);
 	if (widthBar >= 80) {
 		scaleCoverBig();
 		redirect();

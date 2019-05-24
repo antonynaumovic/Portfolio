@@ -1,24 +1,76 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Oswald:600");
 body {
-  font-family: "Oswald", sans-serif; }
+  background: #070707;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  line-height: 1.5; }
 
 h1 {
   text-align: center;
-  color: #070707;
+  color: #fff;
   margin: 30px; }
 
+a {
+  text-decoration: none; }
+
+.cover {
+  width: 100%;
+  height: 100%;
+  z-index: 100; }
+
+.progressBar {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -40vw;
+  margin-top: 40vh;
+  z-index: 10;
+  width: 80vw;
+  height: 2px;
+  padding: 0px;
+  background-color: #fff;
+  width: 0%;
+  -webkit-transition: 0.75s;
+  -moz-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s; }
+
 .gallery {
-  margin: 0.1rem 1rem; }
+  margin: 0.1vw 1vw; }
   .gallery img {
-    width: 18vw;
-    padding: 5px;
+    width: 21.8vw;
+    padding: 1vw;
     filter: grayscale(100%);
-    transition: all 1s ease-out; }
+    transition: all 1s ease-out;
+    align-content: center; }
   .gallery img:hover {
     filter: grayscale(0%);
     transform: scale(1.05); }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
   /* For mobile phones: */
   .gallery img {
-    width: 40vw; } }
+    width: 95vw; } }
+
+@media only screen and (max-width: 800px) and (min-width: 500px) and (orientation: portrait) {
+  /* For mobile phones: */
+  .gallery img {
+    width: 45vw; } }
+
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+  /* For mobile phones: */
+  .gallery img {
+    width: 28vw; } }
+
+@media only screen and (max-width: 1600px) and (min-width: 800px) and (orientation: landscape) {
+  /* For mobile phones: */
+  .gallery img {
+    width: 45vw; } }
+
+@media only screen and (min-width: 1600px) {
+  /* For mobile phones: */
+  .gallery img {
+    width: 21.8vw; } }
