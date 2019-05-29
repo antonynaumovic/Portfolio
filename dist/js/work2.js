@@ -15,10 +15,7 @@ progressBar.addClass("progress-pause");
 
 $("body")
     .mousedown(function () {
-        console.log("yeet");
         down = true;
-
-        console.log(down);
 
         if (down) {
             progressBar.removeClass("progress-pause");
@@ -30,7 +27,6 @@ $("body")
     })
     .mouseup(function () {
         down = false;
-        console.log(down);
         if (down) {
             progressBar.removeClass("progress-pause");
             progressBar.addClass("progress-running");
@@ -42,7 +38,7 @@ $("body")
 
 function redirect() {
     timeout2 = setTimeout(function () {
-        window.location.href = "work3.html";
+        window.location.href = "gallery.html";
     }, 2000);
 }
 
@@ -130,7 +126,6 @@ function moveBackground() {
 
     widthBar = progressBar.width();
     widthBar = (widthBar / progressBar.parent().width()) * 100;
-    console.log(widthBar);
     if (widthBar >= 80) {
         scaleCoverBig();
         redirect();
