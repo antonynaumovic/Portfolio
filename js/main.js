@@ -64,7 +64,7 @@ $("body")
 
 function redirect() {
 	timeout2 = setTimeout(function() {
-		window.location.href = "gallery.html";
+		window.location.href = "work.html";
 	}, 2000);
 }
 
