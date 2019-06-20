@@ -36,6 +36,29 @@ $("body")
         }
     });
 
+function p_touch_start(){
+		p_touch_move.cancel_click = false;
+		progressBar.removeClass("progress-pause");
+		progressBar.addClass("progress-running");
+	}
+	function p_touch_end(){
+		if(p_touch_move.cancel_click) return;
+		p_touch_move.cancel_click = true;//avoid somehow repeat call
+		//trigger onclick()
+	
+	}
+	function p_touch_move(){
+		//user is drag page, not click
+		p_touch_move.cancel_click = true;
+	}
+
+	if (p_touch_move.cancel_click == true){
+		progressBar.removeClass("progress-running");
+		progressBar.addClass("progress-pause");
+	}
+
+
+
 function redirect() {
     timeout2 = setTimeout(function () {
         window.location.href = "gallery.html";
