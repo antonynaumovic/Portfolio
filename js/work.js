@@ -35,7 +35,9 @@ $("body")
 			progressBar.addClass("progress-pause");
 		}
 	});
-
+        $('body').on("touchstart",p_touch_start);
+	$('body').on("touchmove",p_touch_move);
+	$('body').on("touchend",p_touch_end);
 	function p_touch_start(){
 		p_touch_move.cancel_click = false;
 		progressBar.removeClass("progress-pause");
